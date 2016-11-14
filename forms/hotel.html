@@ -1,0 +1,26 @@
+
+        <h1>{{ $parent.settings.pageTitle }}</h1>
+        <p ng-show="$parent.settings.success" class="alert alert-success">{{ $parent.settings.success }}</p>
+        
+        <div class="required-field-block">
+            <input type="text" placeholder="Nombre" ng-model="hotel.name" class="form-control">
+            <div class="required-icon">
+                <div class="text">*</div>
+            </div>
+        </div><!-- name -->
+        
+        <div class="required-field-block">
+            <input type="text" placeholder="Estrellas" ng-model="hotel.starts" class="form-control">
+            <div class="required-icon">
+                <div class="text">*</div>
+            </div>
+        </div><!-- Starts -->
+ 
+        <div class="required-field-block">
+            <input type="text" placeholder="Precio" ng-model="hotel.price" class="form-control">
+            <div class="required-icon">
+                <div class="text">*</div>
+            </div>
+        </div><!-- price -->
+        
+        <button class="btn btn-primary" ng-click="submit($parent.hotel)">{{ $parent.settings.action }}</button>
